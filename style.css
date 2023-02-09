@@ -1,0 +1,99 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: relative;
+  animation-name: move;
+  animation-duration: 2s;
+  /* 총시간이 2초라는 것이다. */
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  /* 다시 뒤로 가면서 반복 */
+  /* reverse 뒤부터 앞으로 재생 */
+  /* alernate-reverse 뒤부터 앞으로 재생한 후 앞에서 다시 뒤로 돌아간다. */
+
+
+}
+
+
+@keyframes move {
+  0% {
+    left: 0;
+  } 
+  25% {
+    left: 100px;
+    background-color: red;
+  }
+  50% {
+    left: 200px;
+    background-color: blue;
+  }
+  75% {
+    left: 300px;
+    background-color: pink;
+  }
+  100% {
+    left: 400px;
+    background-color: green;
+  }
+}
+
+
+.line-active {
+  position: relative;
+  height: 80px;
+  /* border: 1px solid gold; */
+  background: yellow;
+}
+
+/* h2 {
+  color: #fff;
+} */
+
+.line-active span:first-child {
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: red;
+  box-shadow: 0 0 2px 1px red;
+  animation-name: move1;
+  animation-duration: 0.5s;
+  animation-iteration-count: alternate;
+  animation-timing-function: linear;
+}
+
+.line-active span:nth-child(2) {
+  position: absolute;
+  top: 30px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: blue;
+  box-shadow: 0 0 2px 1px red;
+  animation-name: move2;
+  animation-duration: 0.5s;
+  animation-iteration-count: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes move1 {
+  from {
+    left: 0;
+  }
+  to {
+    left: 160px;
+  }
+}
+
+@keyframes move2 {
+  from {
+    left: 0;
+  }
+  to {
+    left: 160px;
+  }
+}
+
